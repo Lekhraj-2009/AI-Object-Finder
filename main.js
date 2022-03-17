@@ -13,17 +13,12 @@ function setup(){
     video.hide();
 }
 
-function draw(){
-    image(video, 0, 0, 400, 400);
-}
-
 function confirm_object(){
     objectName = document.getElementById("object_name").value;
     if (objectName == ""){
         alert("Please Enter an Object first!");
     } else {
         console.log("Find Object: "+objectName);
-        document.getElementById("object_name").value = "";
 
         var synth = window.speechSynthesis;
         speak_data = "Received Object, Please click the START Button below.";
@@ -47,6 +42,17 @@ function start(){
             synth.speak(utterThis);
 
             console.log("Object Detection Started");
+
+            objectDetector = ml5.objectDetector('cocossd', modelLoaded);
+            document.getElementById("status").innerHTML = "Detecting Objects";
         }, 2500);
     }
+}
+
+function modelLoaded(){
+    console.log("CocoSSD Model Loaded Successfully!");
+}
+
+function draw(){
+    image(video, 0, 0, 400, 400);
 }
