@@ -1,0 +1,80 @@
+.body-background{
+    background-image: url("https://previews.123rf.com/images/multigon/multigon1607/multigon160700098/59962546-zur%C3%BCck-zur-schule-vektor-nahtlose-muster-mit-der-schule-elemente-isoliert-auf-wei%C3%9Fem-hintergrund-lin.jpg");
+    background-repeat: repeat;
+    text-align: center;
+    min-width: 650px;
+}
+.heading{
+    width: 100%;
+    position: fixed;
+    margin-top: 0px;
+    background: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+    padding: 15px;
+}
+.header{
+    color: black;
+    font-family: 'Patua One', cursive;
+    margin-top: 0px;
+    
+    /*Flip Animation*/
+    animation-name: flip;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes flip {
+    0%{transform: rotateY(360deg);}
+    75%{transform: rotateY(0deg);}
+}
+.note{
+    font-size: 18.5px;
+    font-family: 'Arvo', serif;
+}
+.input-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+}
+#input-title{
+    margin-right: 5px;
+    border-radius: 5px;
+    color: white;
+    margin-top: 0px;
+    font-size: 16px;
+}
+#object_name{
+    width: 20%;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 1px solid black;
+}
+#object_confirm{
+    background-color: green;
+    color: white;
+    margin-left: 3px;
+    margin-top: -4px;
+    font-size: 14.5px;
+}
+#start{
+    width: 300px;
+    font-size: 16px;
+}
+#start:hover{
+    transition: ease-in-out;
+    transform: scale(1.05);
+}
+.status_button{
+    font-size: 17px;
+    width: 250px;
+    margin-right: 5px;
+}
+.object_button{
+    font-size: 17px;
+    width: 250px;
+    margin-left: 5px;
+}
+canvas{
+    border: 3px solid white;
+    border-radius: 15px;
+    margin-top: 50px;
+    box-shadow: 10px 10px 5px gray;
+}
