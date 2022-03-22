@@ -64,12 +64,15 @@
 }
 .status_button{
     font-size: 17px;
-    width: 250px;
+    width: 275px;
     margin-right: 5px;
 }
-.object_button{
+#result{
+    text-transform: capitalize;
+}
+.result_button{
     font-size: 17px;
-    width: 250px;
+    width: 325px;
     margin-left: 5px;
 }
 canvas{
